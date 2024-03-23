@@ -1,0 +1,117 @@
+
+/*   imported google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+
+
+    body{
+    box-sizing: border-box;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+
+    }
+
+
+
+    .visibleid{
+           display: flex;
+           justify-content: end;
+           gap: 1rem;
+           margin: 2px;
+           align-items: start;
+    }
+
+    #pagination button{
+      margin:2px;
+
+    }
+
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+     
+      }
+      
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+
+    
+
+
+ 
+
+
+    .btn-dark
+    {
+     background-color: white;
+     color: black;
+     align-content: start;
+     border: 1px solid black;
+     height: 2rem;
+    }
+
+    .expense_trackers{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 2rem;
+        margin-bottom: 1rem;
+        text-align: left;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+ 
+    .expense_trackers label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .expense_trackers input,select{
+        font: inherit;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width:15rem;
+        max-width: 100%;
+
+    }
+
+
+    
+
+   
+    form{
+        padding: 3px;
+        margin: 10px;
+    }
+
+ 
+   .container{
+        width: 50%;
+        margin: auto;
+        padding: 2rem;
+        background-color: aliceblue;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+   }
+
+   .logout{
+    text-align: right;
+   }
+
+    
+    

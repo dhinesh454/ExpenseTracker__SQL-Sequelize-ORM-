@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpenseTracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href='expensetracker.css'>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; color: yellow; margin: 5rem ;">ExpenseTracker</h1>
+    </header>
+
+    
+
+    <div class="container">
+
+
+        <div class="premium" id="premium">
+
+            <div class="logout">
+                <button onclick="logout()"  class="btn btn-danger">Logout</button>
+            </div>
+            
+            <button id="rzp-button" class="btn btn-danger">Buy Premium</button>
+            <button onclick="download()" id="expensedownload" class="btn btn-warning">DownloadFile</button>
+
+           
+           
+        </div>
+        <div>
+            <ul id="leaderboard"></ul>
+        </div>
+      
+        <form class="expense_trackers" action="/expense/addexpenses" method="post" onsubmit="saveExpenses(event)" style="text-align: center;">
+            <div class="expense_tracker">     
+                <label for="amount">ExpenseAmount</label>
+                <input type="number" id="amountid" name="amount">
+            </div> 
+
+            <div class="expense_tracker">     
+                <label for="desc">Choose Description</label>
+                <input type="text" id="descid" name="description">
+            </div> 
+
+            <div class="expense_tracker">     
+                <label for="cat">Choose a Category</label>
+                <select name="category" id="categoryid">
+                    <option name="">ChooseBelow</option> 
+                    <option name="food">Food</option>
+                    <option name="movie">Movie</option>
+                    <option name="petrol">Petrol</option>
+                    <option name="electricity">Electricity</option>
+                    <option name="insurancepremium">Insurancepremium</option>
+                    <option name="hospital">Hospital</option>
+                </select>
+            </div> 
+
+            <div class="expense_tracker_action"> 
+            <button type="submit" class="btn btn-primary">Add Expense</button>
+            </div>
+
+        </form>
+
+        <div class="visibleid">
+            <p>Expense per page<p>
+    
+            <div class="page">
+            <a class="btn btn-dark" onclick="pageSize(5)">5</a>
+            <a class="btn btn-dark" onclick="pageSize(10)">10</a>
+            <a class="btn btn-dark" onclick="pageSize(15)">15</a>
+            </div>
+        
+           </div>
+
+        
+        
+
+
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        
+        <table id="expenseTable">
+            <thead>
+              <tr>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="expenseList">
+            </tbody>
+          </table>
+        
+        
+        <div class="expenselist">
+            <ul id="allExpenselist"></ul>
+        </div>
+        <div id="pagination"></div>
+
+        
+
+        
+
+   
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./expensetracker.js"></script>
+</body>
+</html>
